@@ -51,20 +51,9 @@ public class GlobalConsciousnessOverlay extends Overlay {
 
     @Override
     public Dimension render(Graphics2D graphics) {
-        BufferedImage image = new BufferedImage(client.getCanvasWidth(), client.getCanvasHeight(), BufferedImage.TYPE_4BYTE_ABGR);
-        Graphics g = image.getGraphics();
-
         this.speed = plugin.iconSpeed;
 
-        java.util.List<ItemPrice> items = itemManager.search(plugin.itemName);
-
-        Image icon;
-
-        if (items.size() == 0 | plugin.itemName == "") {
-            icon = itemManager.getImage(20594);
-        } else {
-            icon = itemManager.getImage(items.get(0).getId());
-        }
+        Image icon = itemManager.getImage(plugin.itemId);
 
         icon = icon.getScaledInstance(icon.getWidth(null) * plugin.iconScale, icon.getHeight(null) * plugin.iconScale, 0);
 

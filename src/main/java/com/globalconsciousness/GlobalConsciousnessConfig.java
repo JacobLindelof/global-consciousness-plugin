@@ -12,7 +12,8 @@ public interface GlobalConsciousnessConfig extends Config {
 			keyName = "itemName",
 			name = "Item Name",
 			description = "Name of item to display.",
-			position = 1
+			position = 1,
+			hidden = true
 	)
 	default String itemName()
 	{
@@ -20,10 +21,23 @@ public interface GlobalConsciousnessConfig extends Config {
 	}
 
 	@ConfigItem(
+			keyName = "itemId",
+			name = "Item ID",
+			description = "ID of item to display.",
+			position = 2,
+			hidden = true
+	)
+	default int itemId()
+	{
+		return 20594;
+	}
+
+	@ConfigItem(
 			keyName = "iconSpeed",
 			name = "Speed",
 			description = "Speed to travel across the screen.",
-			position = 2
+			position = 3,
+			hidden = true
 	)
 	@Range(
 			min = 1,
@@ -37,7 +51,8 @@ public interface GlobalConsciousnessConfig extends Config {
 			keyName = "iconScale",
 			name = "Scale",
 			description = "Size of floating icon.",
-			position = 3
+			position = 4,
+			hidden = true
 	)
 	@Range(
 			min = 1,
@@ -51,7 +66,8 @@ public interface GlobalConsciousnessConfig extends Config {
 			keyName = "iconOpacity",
 			name = "Opacity",
 			description = "Opacity of floating icon.",
-			position = 4
+			position = 5,
+			hidden = true
 	)
 	@Range(
 			min = 0,
