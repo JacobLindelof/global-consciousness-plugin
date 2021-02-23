@@ -1,11 +1,8 @@
 package com.globalconsciousness;
 
 import com.google.inject.Provides;
-import jdk.nashorn.internal.objects.Global;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
-import net.runelite.api.Skill;
-import net.runelite.api.events.GameTick;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.events.ConfigChanged;
